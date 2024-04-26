@@ -3,7 +3,7 @@
     "message": "Login persistente WeBeep"
   },
   "extension_description": {
-    "message": "Questa estensione ti permette di rimanere loggato su WeBeep."
+    "message": "Rimani loggato su WeBeep."
   },
   "browser_action_title": {
     "message": "Apri WeBeep"
