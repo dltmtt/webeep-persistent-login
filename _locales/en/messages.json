@@ -1,0 +1,23 @@
+{
+  "extension_name": {
+    "message": "WeBeep Persistent Login"
+  },
+  "extension_description": {
+    "message": "This extension allows you to stay logged in to WeBeep."
+  },
+  "browser_action_title": {
+    "message": "Open WeBeep"
+  },
+  "cookie_extended": {
+    "message": "Expiry date of $COOKIE_NAME$ cookie extended to $DATE$.",
+    "placeholders": {
+      "cookie_name": {
+        "content": "$1"
+      },
+      "date": {
+        "content": "$2",
+        "example": "1970-01-01T00:00:00.000Z"
+      }
+    }
+  }
+}
