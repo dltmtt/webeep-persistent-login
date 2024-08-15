@@ -1,5 +1,4 @@
-const webeep_host = "webeep.polimi.it";
-const webeep_url = `https://${webeep_host}`;
+const webeep_url = "https://webeep.polimi.it";
 
 chrome.action.onClicked.addListener(() => {
   chrome.tabs.create({ url: webeep_url });
@@ -8,8 +7,11 @@ chrome.action.onClicked.addListener(() => {
 chrome.webNavigation.onCompleted.addListener(
   () => {
     extendCookie(webeep_url, "MoodleSession");
+    chrome.tabs.update({
+      url: webeep_url + "/auth/shibboleth/index.php",
+    });
   },
-  { url: [{ hostEquals: webeep_host }] }
+  { url: [{ urlEquals: webeep_url + "/login/index.php" }] },
 );
 
 /**
@@ -40,6 +42,6 @@ async function extendCookie(url, name) {
   });
 
   console.log(
-    chrome.i18n.getMessage("cookie_extended", [name, in400days.toISOString()])
+    chrome.i18n.getMessage("cookie_extended", [name, in400days.toISOString()]),
   );
 }
