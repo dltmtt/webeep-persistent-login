@@ -7,7 +7,7 @@
 		"email": "deltonmatteo@gmail.com"
 	},
 	"homepage_url": "https://github.com/dltmtt/webeep-persistent-login",
-	"version": "1.3.0",
+	"version": "1.3.1",
 	"offline_enabled": true,
 	"icons": {
 		"16": "icons/icon16.png",
@@ -29,7 +29,7 @@
 		},
 		{
 			"matches": [
-				"https://idserver.servizicie.interno.gov.it/idp/profile/SAML2/POST/SSO"
+				"https://idserver.servizicie.interno.gov.it/idp/profile/SAML2/POST/SSO*"
 			],
 			"js": ["cie.js"]
 		},
