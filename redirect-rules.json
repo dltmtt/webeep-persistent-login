@@ -1,0 +1,16 @@
+[
+	{
+		"id": 1,
+		"priority": 1,
+		"action": {
+			"type": "redirect",
+			"redirect": {
+				"url": "https://webeep.polimi.it/auth/shibboleth/index.php"
+			}
+		},
+		"condition": {
+			"urlFilter": "|https://webeep.polimi.it/login/index.php",
+			"resourceTypes": ["main_frame"]
+		}
+	}
+]
