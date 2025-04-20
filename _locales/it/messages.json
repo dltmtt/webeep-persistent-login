@@ -4,5 +4,17 @@
 	},
 	"extension_description": {
 		"message": "Rimani loggato su WeBeep."
+	},
+	"cookie_extended": {
+		"message": "Scadenza del cookie $COOKIE_NAME$ estesa a $DATE$.",
+		"placeholders": {
+			"cookie_name": {
+				"content": "$1"
+			},
+			"date": {
+				"content": "$2",
+				"example": "1970-01-01T00:00:00Z"
+			}
+		}
 	}
 }
