@@ -8,9 +8,6 @@ window.addEventListener("load", () => {
 		localStorage.setItem("userEmail", userEmail);
 	}
 
-	document.querySelector("#IDToken1").value = userEmail;
-
-	loginButton = document.querySelector("#IDButton2");
-	loginButton.disabled = false;
-	loginButton.click();
+	document.querySelector("#email").value = userEmail;
+	document.querySelector("#GlobalEmailLookupForm").submit();
 });
