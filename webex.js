@@ -1,13 +1,14 @@
-window.addEventListener("load", () => {
-	userEmail = localStorage.getItem("userEmail");
+const emailInput = document.querySelector("#email");
+const form = document.querySelector("#GlobalEmailLookupForm");
 
-	if (!userEmail) {
-		userEmail = prompt(
-			"Please enter your email. It will be stored locally for future use.",
-		);
-		localStorage.setItem("userEmail", userEmail);
-	}
+let userEmail = localStorage.getItem("userEmail");
 
-	document.querySelector("#email").value = userEmail;
-	document.querySelector("#GlobalEmailLookupForm").submit();
-});
+if (!userEmail) {
+	userEmail = prompt(
+		"Please enter your email. It will be stored locally for future use.",
+	);
+	localStorage.setItem("userEmail", userEmail);
+}
+
+emailInput.value = userEmail;
+form.submit();

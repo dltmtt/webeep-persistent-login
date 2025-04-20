@@ -17,16 +17,6 @@
 		{
 			"matches": ["https://idbroker-eu.webex.com/idb/saml2/jsp/doSSO.jsp"],
 			"js": ["webex.js"]
-		},
-		{
-			"matches": [
-				"https://idserver.servizicie.interno.gov.it/idp/profile/SAML2/POST/SSO*"
-			],
-			"js": ["cie.js"]
-		},
-		{
-			"matches": ["https://posteid.poste.it/jod-login-schema/consent.jsp"],
-			"js": ["poste-id.js"]
 		}
 	],
 	"declarative_net_request": {
