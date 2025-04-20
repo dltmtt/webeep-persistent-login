@@ -4,9 +4,9 @@ chrome.action.onClicked.addListener(() => {
 	chrome.tabs.create({ url: webeep_url });
 });
 
-chrome.webNavigation.onCompleted.addListener(
-	() => {
-		extendCookie(webeep_url, "MoodleSession");
+chrome.webNavigation.onBeforeNavigate.addListener(
+	async () => {
+		await extendCookie(webeep_url, "MoodleSession");
 		chrome.tabs.update({
 			url: `${webeep_url}/auth/shibboleth/index.php`,
 		});
@@ -29,10 +29,9 @@ async function extendCookie(url, name) {
 		return;
 	}
 
-	const now = new Date();
-	const in400days = new Date(now.setDate(now.getDate() + 400));
+	const in400days = new Date(Date.now() + 400 * 24 * 60 * 60 * 1000);
 
-	chrome.cookies.set({
+	await chrome.cookies.set({
 		url: url,
 		name: name,
 		value: cookie.value,
